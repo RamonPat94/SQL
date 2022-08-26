@@ -1,0 +1,32 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, section TEXT, available_units INTEGER);
+
+INSERT into store VALUES
+(1, "apple", .69, "Produce", 400),
+(2, "orange", .65, "Produce", 500),
+(3, "fish", 5.00, "Meat", 40),
+(4, "Ground Beef", 4.50, "Meat", 70),
+(5, "Burgers", 10.00, "frozen", 50), 
+(6, "Steak", 12.00, "Meat", 30),
+(7, "Watermelon", 4.25, "Produce", 60),
+(8, "Rice", 3.00, "bulk", 200),
+(9, "Beans", 2.50, "bulk", 250),
+(10, "Bread", 1.99, "bread", 100),
+(11, "Burger Buns", 2.99, "bread", 100), 
+(12, "Ketchup", 2.50, "condiment", 50),
+(13, "Mustard", 2.50, "condiment", 150),
+(14, "Ice Cream", 5.00, "frozen", 25), 
+(15, "Broccoli", 2.00 , "frozen", 90);
+
+
+--Display the database ordered by price. 
+Select * FROM store ORDER BY price;
+
+
+--Shows how many units we have available in order from least to greatest
+SELECT * FROM store ORDER by available_units asc;
+
+
+--Shows what the average price of items is in the Produce section.
+SELECT avg(price) FROM store WHERE section = 'Produce' ;
