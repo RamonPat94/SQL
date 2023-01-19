@@ -28,5 +28,5 @@ Select * FROM store ORDER BY price;
 SELECT * FROM store ORDER by available_units asc;
 
 
---Shows what the average price of items is in the Produce section.
+--what is the average price of items in the Produce section?
 SELECT avg(price) FROM store WHERE section = 'Produce' ;
